@@ -1,2 +1,3 @@
-# raytracer
-Epitech Final Grahic Programming Module's project. The "Raytracer" is a 3D modeling software using Epitech Graphic Library named "MinilibX" allowing users to create 3D pictures. Made from scratch by group of 6.
+#raytracer
+
+Epitech Final Grahic Programming Module's project. The "Raytracer" is a 3D modeling software allowing users to create 3D pictures via .tds config file. Made from scratch by group of 6.
