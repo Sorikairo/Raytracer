@@ -1,0 +1,84 @@
+Tiwind Data System (TDS) Specification
+======================================
+
+Tiwind Data System consists of two types of files : TDS and TCS files.
+TDS files are code written and readable by the human, while TCS are compiled for
+faster reading by a program.
+
+
+
+1. General information
+
+1.1. Blocks
+TDS is structured in blocks.
+They are the "skeleton" of a TDS file. They are the holder of every single
+variable contained in the file, because it is impossible to declare any variable
+outside of a block.
+A block consists of two elements:
+- a name, that isn't necessarely unique. The name of the block is used for
+  identifing that block.
+- a list of variables (see below). Please note that a block doesn't have a
+  limited number of variables, and that it can have no variable in the list.
+
+1.2. Variables
+The notion of "variable" in TDS is basically the same as a lot of programming
+languages: a variable is used for storing an information.
+A variable consists of three elements:
+- its type (see below for a list of standard ones)
+- a name, that MUST be unique inside the block the variable is stored in
+- a value, that is structured differently depending on the type
+
+1.3. Type list
+-------------------------------------------------------------------------------
+| TYPE NAME | TYPE ID | TYPE SIZE |             SHORT DESCRIPTION             |
+-------------------------------------------------------------------------------
+| BLOCK     |    1    |  NO SIZE  | Special type, marks block beginning       |
+| BLOCK_END |    2    |  NO SIZE  | Special type, marks block end             |
+| INT8      |    8    |     1     | 8-bit integer                             |
+| INT16     |    9    |     2     | 16-bit integer                            |
+| INT32     |   10    |     4     | 32-bit integer                            |
+| STR       |   11    |  VARYING  | Ascii string                              |
+| FLT32     |   12    |     4     | 32-bit IEEE 754 floating point number     |
+| FLT64     |   13    |     8     | 64-bit IEEE 754 floating point number     |
+-------------------------------------------------------------------------------
+For further information about types, please refer to the fourth chapter of this
+file.
+
+
+
+2. TDS File Structure
+
+A TDS file must be a text file. A single LF character must be used for new lines
+and spaces and tabulations are ignored during the reading of the file.
+
+2.1. Block
+Blocks are the only thing that may be defined directly in the file.
+A block always starts with with "BLOCK block_name", block_name being the name of
+the block. block_name MUST be an ascii string.
+Some variables then may be written into the block, until the end of the block is
+declarated by the keyword "END_BLOCK".
+
+2.2. Variable
+A variable MUST be defined inside a block. Only one variable by line is allowed.
+A variable must be defined using the following syntax:
+"TYPE variable_name = [value]", TYPE being a correct type, variable_name being
+the name of the variable, written in an ascii string, and [value] being the
+value of the variable, following the TDS format of the type.
+
+
+
+3. TCS File Structure
+
+A TCS file must be a binary file, stored in little endian. A TCS file always
+starts with the magic number 1413698346, coded on 4 bytes.
+
+3.1. Block
+Like TDS, blocks are the only thing allowed directly in the file after the
+magic number.
+They start with the BLOCK type id, coded on one byte, and the name of the block
+(See 3.3).
+A block ends with the BLOCK_END type id, coded on one byte as well.
+
+3.2. Variable
+A variable MUST be defined inside a block.
+A variable 

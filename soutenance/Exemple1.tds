@@ -1,0 +1,28 @@
+BLOCK rt_camera
+      FLT64 pos_x = -100.0
+      FLT64 pos_y = 0.0
+      FLT64 pos_z = 0.0
+      FLT64 view_angle_x = 10.0
+      FLT64 view_angle_y = 10.0
+      FLT64 view_angle_z = 100.0
+END_BLOCK
+
+BLOCK rt_light
+      FLT64 pos_x = -30.0
+      FLT64 pos_y = -40.0
+      FLT64 pos_z = 20.0
+END_BLOCK
+
+BLOCK rt_light
+      FLT64 pos_x = -30.0
+      FLT64 pos_y = -40.0
+      FLT64 pos_z = -20.0
+END_BLOCK
+
+BLOCK rt_sphere
+      FLT64 pos_x = 0.0
+      FLT64 pos_y = 0.0
+      FLT64 pos_z = 0.0
+      FLT64 radius = 30.0
+      INT32 color = 255
+END_BLOCK

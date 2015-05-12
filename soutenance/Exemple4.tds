@@ -1,0 +1,41 @@
+BLOCK rt_camera
+      FLT64 pos_x = -100.0
+      FLT64 pos_y = 0.0
+      FLT64 pos_z = 0.0
+      FLT64 view_angle_x = 0.0
+      FLT64 view_angle_y = 0.0
+      FLT64 view_angle_z = 0.0
+END_BLOCK
+
+BLOCK rt_light
+      FLT64 pos_x = 10.0
+      FLT64 pos_y = -10.0
+      FLT64 pos_z = 10.0
+END_BLOCK
+
+BLOCK rt_light
+      FLT64 pos_x = 0.0
+      FLT64 pos_y = 0.0
+      FLT64 pos_z = 0.0
+END_BLOCK
+
+BLOCK rt_cone
+      FLT64 pos_x = 5.0
+      FLT64 pos_y = 10.0
+      FLT64 pos_z = 0.0
+      FLT64 radius = 5.0
+      FLT64 rot_x = 0.0
+      FLT64 rot_y = 0.0
+      FLT64 rot_z = 0.0
+      INT32 color = 6723891
+END_BLOCK
+
+BLOCK rt_plane
+      FLT64 pos_x = 0.0
+      FLT64 pos_y = 0.0
+      FLT64 pos_z = -10.0
+      FLT64 rot_x = 0.0
+      FLT64 rot_y = 0.0
+      FLT64 rot_z = 0.0
+      INT32 color = 6723891
+END_BLOCK

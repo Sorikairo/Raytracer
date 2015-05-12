@@ -1,0 +1,2 @@
+manage_client.c:      tmp = cli->next;
+manage_client.c:      free(cli->buffer);

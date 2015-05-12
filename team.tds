@@ -1,0 +1,22 @@
+BLOCK rt_camera
+      FLT64 pos_x = 0.0
+      FLT64 pos_y = 0.0
+      FLT64 pos_z = 0.0
+      FLT64 view_angle_x = 0.0
+      FLT64 view_angle_y = 0.0
+      FLT64 view_angle_z = 0.0
+END_BLOCK
+
+BLOCK rt_light
+      FLT64 pos_x = -20.0
+      FLT64 pos_y = 0.0
+      FLT64 pos_z = 0.0
+END_BLOCK
+
+BLOCK rt_obj
+      STR path = object/Team/Team.obj
+      FLT64 pos_x = 10.0
+      FLT64 pos_y = 0.0
+      FLT64 pos_z = 0.0
+      INT32 color = 255
+END_BLOCK

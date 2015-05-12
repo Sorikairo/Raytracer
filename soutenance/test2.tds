@@ -1,0 +1,72 @@
+BLOCK rt_camera
+      FLT64 pos_x = 0.0
+      FLT64 pos_y = 0.0
+      FLT64 pos_z = 0.0
+      FLT64 view_angle_x = 0.0
+      FLT64 view_angle_y = 0.0
+      FLT64 view_angle_z = 0.0
+END_BLOCK
+
+BLOCK rt_light
+      FLT64 pos_x = 10.0
+      FLT64 pos_y = 0.0
+      FLT64 pos_z = 10.0
+END_BLOCK
+
+BLOCK rt_obj
+      STR path = object/Dark_fighter/dark_fighter.obj
+      FLT64 pos_x = 250.0
+      FLT64 pos_y = -30.0
+      FLT64 pos_z = 15.0
+      INT32 color = 13260
+END_BLOCK
+
+BLOCK rt_obj
+      STR path = object/Small_Fighter/small_fighter.obj
+      FLT64 pos_x = 150.0
+      FLT64 pos_y = 30.0
+      FLT64 pos_z = 5.0
+      INT32 color = 13260
+END_BLOCK
+
+BLOCK rt_obj
+      STR path = object/Tank/Tank.obj
+      FLT64 pos_x = 60.0
+      FLT64 pos_y = 10.0
+      FLT64 pos_z = 0.0
+      INT32 color = 13408614
+END_BLOCK
+
+BLOCK rt_obj
+      STR path = object/Sci_Fighter/Sample_Ship.obj
+      FLT64 pos_x = 150.0
+      FLT64 pos_y = 10.0
+      FLT64 pos_z = 5.0
+      INT32 color = 3342336
+END_BLOCK
+
+BLOCK rt_obj
+      STR path = object/tree/arbre-2000.obj
+      FLT64 pos_x = 50.0
+      FLT64 pos_y = -10.0
+      FLT64 pos_z = 0.0
+      INT32 color = 3381504
+END_BLOCK
+
+BLOCK rt_obj
+      STR path = object/tree/arbre-2000.obj
+      FLT64 pos_x = 50.0
+      FLT64 pos_y = 10.0
+      FLT64 pos_z = 0.0
+      INT32 color = 3381504
+END_BLOCK
+
+BLOCK rt_plane
+      FLT64 pos_x = 0.0
+      FLT64 pos_y = 0.0
+      FLT64 pos_z = -10.0
+      FLT64 rot_x = 0.0
+      FLT64 rot_y = 0.0
+      FLT64 rot_z = 0.0
+      INT32 color = 6723891
+END_BLOCK
